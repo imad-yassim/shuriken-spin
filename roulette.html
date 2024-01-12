@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Roulette</title>
+</head>
+<body >
+
+   <!--<div class="image-container">
+    <img src="ryujingameckground.png" alt="Ryujin Game Background" id="fade-in-image">
+  </div>-->
+<div class="relative h-screen bg-cover bg-center " style="background-image: url(./ryujingamebackground.png)"></div>
+ <div id="myDiv" class="transparent-grey-div" ></div>
+
+
+<div style="position: fixed;
+top: 49%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-image: url('Group4.png'); 
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+transition: width 3s ease, height 3s ease;" class="h-[30rem] w-[30rem] sm:h-[34rem] sm:w-[34rem] md:h-[44rem] md:w-[44rem]  "></div>
+
+
+
+<!--CodeForRoulette-->
+
+	<span class="absolute top-32 right-32"><button id="spin">Spin</button>
+</span>
+<div id="roulette" class="absolute  p-2 rounded-full w-72 h-72 sm:w-[20rem] sm:h-[20rem] md:h-[26rem] md:w-[26rem]">
+  <div class="wheel">
+      <div class="number" style="--i: 1"><span>1000</span></div>
+      <div class="number" style="--i: 2"><span>20 000</span></div>
+      <div class="number" style="--i: 3"><span>1000</span></div>
+      <div class="number" style="--i: 4"><span>100</span></div>
+      <div class="number" style="--i: 5"><span>20</span></div>
+      <div class="number" style="--i: 6"><span>1000</span></div>
+      <div class="number" style="--i: 7"><span>1000</span></div>
+      <div class="number" style="--i: 8"><span>800</span></div>
+      <div class="number" style="--i: 9"><span>6800</span></div>
+      <div class="number" style="--i: 10"><span>1000</span></div>
+      <div class="number" style="--i: 11"><span>7800</span></div>
+      <div class="number" style="--i: 12"><span>1000</span></div>
+      <img class="shuriken" src="./shuriken.png" alt="shuriken">
+  </div>
+</div> 
+
+<!--End-->
+
+<!--<div class="button">
+  <span>SPIN</span>
+</div>-->
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
