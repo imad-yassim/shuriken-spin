@@ -124,26 +124,22 @@ body.show-image .expanding-image {
   background-repeat: no-repeat;
   background-size: 95% 95%;
   border: 1px solid #323232;
+  align-self: flex-end;
+
+}
+.spin-container {
+  aspect-ratio: 5.43;
+  background: url(./bottom_pattern.svg) #1C1D1E;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 96% 96%;
+  border: 1px solid #323232;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 #spin{
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	z-index:10;
-	background-color: #e2e2e2;
-	text-transform: uppercase;
-	border:3px solid #fff;
-	font-weight:bold;
-	font-size:5px;
-	color:#a2a2a2;
-	width: 40px;
-	height:40px;
-	font-family: sans-serif;
-	border-radius:50%;
-	cursor: pointer;
-	outline:none;
-	letter-spacing: 1px;
+	color: #E7B40A;
 }
