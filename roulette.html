@@ -9,53 +9,48 @@
 </head>
 <body >
 
-   <!--<div class="image-container">
-    <img src="ryujingameckground.png" alt="Ryujin Game Background" id="fade-in-image">
-  </div>-->
-<div class="relative h-screen bg-cover bg-center " style="background-image: url(./ryujingamebackground.png)"></div>
+<main class="main overflow-hidden">
+
  <div id="myDiv" class="transparent-grey-div" ></div>
-
-
-<div style="position: fixed;
-top: 49%;
-left: 50%;
-transform: translate(-50%, -50%);
-background-image: url('Group4.png'); 
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-transition: width 3s ease, height 3s ease;" class="h-[30rem] w-[30rem] sm:h-[34rem] sm:w-[34rem] md:h-[44rem] md:w-[44rem]  "></div>
-
-
-
-<!--CodeForRoulette-->
-
 	<span class="absolute top-32 right-32"><button id="spin">Spin</button>
 </span>
-<div id="roulette" class="absolute  p-2 rounded-full w-72 h-72 sm:w-[20rem] sm:h-[20rem] md:h-[26rem] md:w-[26rem]">
-  <div class="wheel">
-      <div class="number" style="--i: 1"><span>1000</span></div>
-      <div class="number" style="--i: 2"><span>20 000</span></div>
-      <div class="number" style="--i: 3"><span>1000</span></div>
-      <div class="number" style="--i: 4"><span>100</span></div>
-      <div class="number" style="--i: 5"><span>20</span></div>
-      <div class="number" style="--i: 6"><span>1000</span></div>
-      <div class="number" style="--i: 7"><span>1000</span></div>
-      <div class="number" style="--i: 8"><span>800</span></div>
-      <div class="number" style="--i: 9"><span>6800</span></div>
-      <div class="number" style="--i: 10"><span>1000</span></div>
-      <div class="number" style="--i: 11"><span>7800</span></div>
-      <div class="number" style="--i: 12"><span>1000</span></div>
-      <img class="shuriken" src="./shuriken.png" alt="shuriken">
+<div class="game-container">
+  <div class="row-of-three">
+    <div class="side-menu lg:w-[240px] md:w-[150px] sm:w-[100px]">
+
+    </div>
+    <div class=" w-[90vw] sm:w-[24rem] md:w-[26rem] lg:w-[34rem] beast">
+    <div id="roulette" class="w-[60%] sm:w-[14rem] md:w-[15.5rem] lg:w-[20rem] aspect-square">
+    <div class="wheel">
+        <div class="number" style="--i: 1"><span class="number-text">1000</span></div>
+        <div class="number" style="--i: 2"><span class="number-text">20 000</span></div>
+        <div class="number" style="--i: 3"><span class="number-text">1000</span></div>
+        <div class="number" style="--i: 4"><span class="number-text">100</span></div>
+        <div class="number" style="--i: 5"><span class="number-text">20</span></div>
+        <div class="number" style="--i: 6"><span class="number-text">1000</span></div>
+        <div class="number" style="--i: 7"><span class="number-text">1000</span></div>
+        <div class="number" style="--i: 8"><span class="number-text">800</span></div>
+        <div class="number" style="--i: 9"><span class="number-text">6800</span></div>
+        <div class="number" style="--i: 10"><span class="number-text">1000</span></div>
+        <div class="number" style="--i: 11"><span class="number-text">7800</span></div>
+        <div class="number" style="--i: 12"><span class="number-text">1000</span></div>
+        <img class="shuriken" src="./shuriken.png" alt="shuriken">
+        <div class="shadow-layer"></div>
+    </div>
   </div>
-</div> 
+  </div>
+  <div class="side-menu lg:w-[240px] md:w-[180px] sm:w-[130px]">
+  
+  </div> 
+  </div>
+  <div class="spin-container">
+    <button></button>
+  </div>
 
-<!--End-->
+</div>
 
-<!--<div class="button">
-  <span>SPIN</span>
-</div>-->
 
+</main>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
