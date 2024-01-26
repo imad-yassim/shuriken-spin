@@ -1,3 +1,13 @@
+@font-face {
+  font-family: corbel;
+  src: url(Corbel_Bold.ttf);
+}
+
+
+*{
+  font-family: Poppins;
+}
+
 .main {
   height: 100vh;
   position: relative;
@@ -7,7 +17,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -2;
+}
+.secTitle {
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.thirdTitle {
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 .transparent-grey-div {
   width: 100%;
@@ -24,22 +41,22 @@
 #roulette{
 position: absolute;
 border-radius: 999px;
-top: 51%;
-left: 50%;
+top: 52%;
+left: 49.8%;
 transform: translate(-50%, -50%);
-transition: width 2s ease, height 2s ease, transform 5s ease-in-out; 
+transition: width 2s ease, height 2s ease, transform 8s cubic-bezier(.57,-0.02,0,.99); 
 
 }
 
 .beast {
   aspect-ratio: 0.917;
   position: relative;
-background-image: url('Group4.png'); 
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-transition: width 2s ease, height 2s ease;
-z-index: 10;
+  background-image: url('RyuBeast.png'); 
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: width 2s ease, height 2s ease;
+  z-index: 10;
 }
 
 .wheel {
@@ -54,7 +71,7 @@ z-index: 10;
 .shadow-layer {
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 80px #2d1d02af;
+  box-shadow: inset 0 0 50px #2d1d02ab;
   border-radius: 1000px;
 }
 .number {
@@ -70,22 +87,47 @@ z-index: 10;
   user-select: none;
 }
 .number-text {
-  font-weight: 700;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  -webkit-text-fill-color: #E7B40A;
-  font-size: 24px;
-  color: #E7B40A;
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+  font-family: corbel;
+  text-shadow: 0 0 5px black;
+}
+
+@media (orientation: landscape) and (max-width: 500px) {
+  body {
+      transform: rotate(-90deg); /* Rotate the body */
+      transform-origin: top left; /* Set the origin of the rotation to the top-left corner */
+      width: 100vh; /* Set the width to the viewport height */
+      height: 100vw; /* Set the height to the viewport width */
+      overflow-x: hidden; /* Hide horizontal overflow */
+      overflow-y: auto; /* Allow vertical scrolling */
+      position: absolute; /* Position the body absolutely */
+      top: 100%; /* Move the body to the bottom of the viewport */
+      left: 0; /* Align the body to the left */
+      margin-left: 100vh;
+  }
 }
 
 .shuriken {
   position: absolute;
-  width: 15%;
-  height: 15%;
+  width: 20%;
+  height: 20%;
   object-fit: contain;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  z-index: 20;
+  transition: transform 12s cubic-bezier(.62,1.7,.25,.98); 
+}
+
+.blurred-wheel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+
 }
 
 .number span {
@@ -94,10 +136,10 @@ z-index: 10;
 }
 
 .number:nth-child(even){
-  background: orange;
+  background: #FFA234;
 }
 .number:nth-child(odd){
-  background: maroon;
+  background: #94001F;
 }
 
 body.show-image .expanding-image {
@@ -114,8 +156,6 @@ body.show-image .expanding-image {
   display: flex;
 }
 .side-menu{
-
-  height: fit-content;
   aspect-ratio: 0.52;
   border-radius: 15px;
   border: 1px solid #323232;
@@ -123,6 +163,22 @@ body.show-image .expanding-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 95% 95%;
+  border: 1px solid #323232;
+  align-self: flex-end;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.top-side-menu{
+  flex-grow: 1;
+  border-radius: 15px;
+  border: 1px solid #323232;
+  background: url(./top_pattern.svg) #1C1D1E;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95%;
   border: 1px solid #323232;
   align-self: flex-end;
 
@@ -141,5 +197,37 @@ body.show-image .expanding-image {
 }
 
 #spin{
-	color: #E7B40A;
+	background: url(spin.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 200px;
+  aspect-ratio: 3.5;
+  cursor: pointer;
+  color: white;
+}
+.multiplier {
+	background: url(multiplier_bg.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  color: white;
+  display: block;
+  line-height: 30px;
+}
+
+::-webkit-scrollbar {
+  background: #3F3F3F;
+  border-radius: 400px;
+  height: 6px;
+
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ACACAC;
+  border-radius: 400px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d1d1d1;
+
 }

@@ -19,11 +19,14 @@ setTimeout(function() {
   myDiv.style.backgroundColor = "rgba(10, 10, 10, 0.5)";
 }, 2000);
 
-document.body.classList.add('show-image');
+ document.body.classList.add('show-image');
 
 //------------------------------------------------------------------------------Roulette
 
 let roulette = document.querySelector("#roulette");
+let wheel =  document.querySelector(".wheel");
+let shuriken = document.querySelector(".shuriken")
+let blurredWheel = document.querySelector(".blurred-wheel")
 let btn = document.getElementById("spin");
 let number = 3000;
 
@@ -31,11 +34,14 @@ let clicks = 0;
 btn.onclick = function () {
   clicks += 1;
 	roulette.style.transform = "translate(-50%, -50%) rotate(" + number + "deg)";
+	shuriken.style.transform = "translate(-50%, -50%) rotate(" + number + "deg)";
   setTimeout(()=>{
-    roulette.style.filter = "blur(10px)";
-  }, 1200)
+    blurredWheel.style.opacity = 1
+    // wheel.style.display = 'none'
+  }, 1600)
   setTimeout(()=>{
-    roulette.style.filter = "blur(0px)";
+    blurredWheel.style.opacity = 0
+    // wheel.style.display = 'block'
   }, 3000)
 	number += 3000;
 }

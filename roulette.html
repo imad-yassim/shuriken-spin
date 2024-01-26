@@ -5,22 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Roulette</title>
+  <title>Ryujin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body >
+<body>
 
 <main class="main overflow-hidden">
 
- <div id="myDiv" class="transparent-grey-div" ></div>
+ <!-- <div id="myDiv" class="transparent-grey-div" ></div> -->
 
 </span>
 <div class="game-container">
   <div class="row-of-three">
-    <div class="side-menu lg:w-[240px] md:w-[150px] sm:w-[100px]">
+    <div  class="flex flex-col gap-2">
+      <div class="top-side-menu lg:w-[240px] md:w-[150px] sm:w-[100px]">
 
+      </div>
+      <div class="side-menu lg:w-[240px] lg:px-5 lg:py-9 md:w-[150px] md:px-2 md:py-6 sm:w-[100px] px-2 py-6">
+        <h2 class="text-[#ACACAC] secTitle">NFT BONUSES</h2>
+        <div class="w-full">
+          <div class="bg-[#ACACAC] h-[1px] w-10 mx-auto"></div>
+          <h3 class="text-[#ACACAC] text-center pt-1 thirdTitle">YOUR NFT</h3>
+        </div>
+ 
+            <div class="w-full flex overflow-x-scroll gap-1">
+          <img class="aspect-square rounded-md w-20" src="ryujingamebackground.png" alt="">
+          <img class="aspect-square rounded-md w-20" src="ryujingamebackground.png" alt="">
+          <img class="aspect-square rounded-md w-20" src="ryujingamebackground.png" alt="">
+
+        </div>
+
+
+      
+        <button class="text-yellow-400 mt-3"><img class="w-24" src="select.png" alt=""></button>
+        <div class="mt-auto">
+           <h3 class="text-[#ACACAC] thirdTitle text-center">STACKED NFTS</h3>
+        <div class="relative w-full h-[5rem]">
+          <img class="aspect-square absolute rounded-md w-[5rem] left-1/2 z-20 -translate-x-1/2 top-0" src="ryujingamebackground.png" alt="">
+          <img class="aspect-square absolute rounded-md w-[5rem] left-[30%] z-10 origin-bottom-right rotate-[-10deg] -translate-x-1/2 top-0" src="ryujingamebackground.png" alt="">
+          <img class="aspect-square absolute rounded-md w-[5rem] left-[70%] z-10 origin-bottom-left rotate-[10deg] -translate-x-1/2 top-0" src="ryujingamebackground.png" alt="">
+        </div>
+        <span class="block mx-auto mt-4 text-sm text-[#60FD00]">(+10% luck) (+5% Ryu)</span>
+        </div>
+       
+      </div>
     </div>
     <div class=" w-[90vw] sm:w-[24rem] md:w-[26rem] lg:w-[34rem] beast">
-    <div id="roulette" class="w-[60%] sm:w-[14rem] md:w-[15.5rem] lg:w-[20rem] aspect-square">
+    <div id="roulette" class="w-[60%] sm:w-[15rem] md:w-[15.5rem] lg:w-[20.5rem] aspect-square">
     <div class="wheel">
         <div class="number" style="--i: 1"><span class="number-text">1000</span></div>
         <div class="number" style="--i: 2"><span class="number-text">20 000</span></div>
@@ -34,17 +67,58 @@
         <div class="number" style="--i: 10"><span class="number-text">1000</span></div>
         <div class="number" style="--i: 11"><span class="number-text">7800</span></div>
         <div class="number" style="--i: 12"><span class="number-text">1000</span></div>
-        <img class="shuriken" src="./shuriken.png" alt="shuriken">
         <div class="shadow-layer"></div>
+      </div>
+      <img class="shuriken" src="./shuriken.png" alt="shuriken">
+      <img class="blurred-wheel" src="./blurred_wheel.png" alt="blurred_wheel">
+  </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <div  class="top-side-menu lg:w-[240px] md:w-[180px] sm:w-[130px]">
+
     </div>
-  </div>
-  </div>
-  <div class="side-menu lg:w-[240px] md:w-[180px] sm:w-[130px]">
-  
+    <div  class="side-menu lg:w-[240px] lg:px-5 lg:py-9 md:w-[150px] md:px-2 md:py-6 sm:w-[100px] px-2 py-6">
+      <h2 class="text-[#ACACAC] secTitle">TOKENS</h2>
+      <div class="w-full">
+        <div class="bg-[#ACACAC] h-[1px] w-10 mx-auto"></div>
+        <h3 class="text-[#ACACAC] text-center pt-1 thirdTitle">REWARDS OBTAINED</h3>
+      </div>
+      
+     <table class="w-full text-yellow-400 flex-1">
+      <tr class="h-12">
+        <td class="text-center h-12"><p class="w-12 mx-auto inline-block font-bold">RYU </p></td>
+        <td><span class="">:</span></td>
+        <td class="text-center"><p class="w-12 mx-auto font-semibold">35,444</p></td>
+      </tr>
+      <tr>
+        <td><img class="w-12 block mx-auto" src="Whitelist-Scroll.png" alt=""></td>
+        <td><span class="">:</span></td>
+        <td class="text-center">1</td>
+      </tr>
+      <tr>
+        <td><img class="w-12 block mx-auto" src="./NFT-scroll.png" alt=""></td>
+        <td><span class="">:</span></td>
+        <td class="text-center">3</td>
+      </tr>
+      <tr>
+        <td><img class="w-12 block mx-auto" src="./Presale-Scroll.png" alt=""></td>
+        <td><span class="">:</span></td>
+        <td class="text-center">5</td>
+      </tr>
+     </table>
+     <div class="w-full h-32 flex flex-col justify-center">
+      <h3 class="text-[#ACACAC] self-center text-center thirdTitle">MULTIPLIER</h3>
+      <div class="w-full flex gap-1">
+        <button class="w-full"><img src="x1.png" alt=""><p class="block text-center text-[#FDC500] text-sm font-semibold">150<span class="text-xs"> RYU</span></p></button>
+        <button class="w-full"><img class="scale-[1.15]" src="x5-selected.png" alt=""><p class="block text-center text-white text-sm font-semibold">150<span class="text-xs"> RYU</span></p></button>
+        <button class="w-full"><img src="x2.png" alt=""><p class="block text-center text-[#FDC500] text-sm font-semibold">150<span class="text-xs"> RYU</span></p></button>
+      </div> 
+     </div>
+    </div>
   </div> 
   </div>
   <div class="spin-container w-[90vw] sm:w-[24rem] md:w-[26rem] lg:w-[34rem] mx-auto">
-    <button id="spin">SPIN</button>
+    <button id="spin"></button>
   </div>
 
 </div>
