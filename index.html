@@ -27,7 +27,10 @@
         <div
           class="grid lg:grid-cols-[240px_1fr_240px] max-h-full md:grid-cols-[240px_1fr_240px] grid-cols-1"
         >
-          <div class="flex flex-col gap-2 absolute md:relative w-[90vw] md:w-full top-5 bottom-5 z-50 left-1/2 transition-transform -translate-x-1/2">
+          <div id="nftsTab"
+            class="flex flex-col gap-2 absolute md:relative w-[90vw] md:w-full top-5 bottom-5 z-20 left-1/2 md:left-auto transition-transform md:translate-x-0 -translate-x-[170%]"
+          >
+          <button class="absolute top-5 w-[4rem] right-5 hidden z-30 closeBtn"><img src="./closeBtn.png" alt="rewards button" /></button>
             <div class="top-side-menu px-5 py-6">
               <div
                 class="overflow-hidden relative w-full h-full winners-container"
@@ -47,7 +50,9 @@
               </div>
             </div>
             <div class="side-menu lg:px-5 lg:py-9 md:px-2 md:py-6 px-2 py-6">
-              <h2 class="text-[#ACACAC] secTitle lg:text-normal mt-5 text-lg md:text-sm">
+              <h2
+                class="text-[#ACACAC] secTitle lg:text-normal mt-5 text-lg md:text-sm"
+              >
                 NFT BONUSES
               </h2>
               <div class="w-full">
@@ -59,7 +64,7 @@
                 </h3>
               </div>
 
-              <div class="w-[85%] flex overflow-x-scroll gap-1">
+              <div class="w-[85%] md:w-[100%] flex overflow-x-scroll gap-1">
                 <img
                   class="aspect-square rounded-md w-[40%]"
                   src="ryujingamebackground.png"
@@ -86,7 +91,7 @@
                 </h3>
                 <div class="relative w-full h-[5rem]">
                   <img
-                    class="aspect-square absolute rounded-md w-[60%] md:w-[5rem] left-1/2 z-20 -translate-x-1/2 top-0" 
+                    class="aspect-square absolute rounded-md w-[60%] md:w-[5rem] left-1/2 z-20 -translate-x-1/2 top-0"
                     src="ryujingamebackground.png"
                     alt=""
                   />
@@ -164,8 +169,14 @@
                 alt="blurred_wheel"
               />
             </div>
+            <button class="absolute -top-32 w-[6rem] left-2" id="nftsBtn"><img src="./nfts.png" alt="ntfts button" /></button
+              ><button class="absolute -top-32 w-[6rem] right-2" id="rewardsBtn"><img src="./rewards.png" alt="rewards button" /></button>
+              
           </div>
-          <div class="flex flex-col gap-2 absolute md:relative w-[90vw] md:w-full top-5 bottom-5 z-50  left-1/2 transition-transform translate-x-full">
+          <div id="rewardsTab"
+            class=" flex flex-col gap-2 absolute md:relative w-[90vw] md:w-full top-5 bottom-5 z-20 left-1/2 md:left-auto transition-transform md:translate-x-0 translate-x-[170%]"
+          >
+          <button class="absolute top-5 w-[4rem] right-5 hidden z-30 closeBtn"><img src="./closeBtn.png" alt="rewards button" /></button>
             <div class="top-side-menu px-5 py-6">
               <div
                 class="overflow-hidden relative w-full h-full flex flex-col items-center justify-center text-white"
@@ -179,7 +190,9 @@
               </div>
             </div>
             <div class="side-menu lg:px-5 lg:py-9 md:px-2 md:py-6 px-2 py-6">
-              <h2 class="text-[#ACACAC] lg:text-normal md:text-sm text-xl secTitle">
+              <h2
+                class="text-[#ACACAC] lg:text-normal md:text-sm text-xl secTitle"
+              >
                 TOKENS
               </h2>
               <div class="w-full">
@@ -243,7 +256,9 @@
                   <td class="text-center">5</td>
                 </tr>
               </table>
-              <div class="w-full h-32 shrink-0 my-8 md:my-0 flex flex-col justify-center">
+              <div
+                class="w-full h-32 shrink-0 my-8 md:my-0 flex flex-col justify-center"
+              >
                 <h3 class="text-[#ACACAC] self-center text-center thirdTitle">
                   MULTIPLIER
                 </h3>
@@ -275,8 +290,10 @@
                 </div>
               </div>
             </div>
+        
           </div>
         </div>
+     
         <div
           class="spin-container w-[90vw] sm:w-[24rem] md:w-[26rem] lg:w-[34rem] mx-auto"
         >
