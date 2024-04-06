@@ -1,5 +1,6 @@
 @font-face {
   font-family: corbel;
+  font-weight: 700;
   src: url(Corbel_Bold.ttf);
 }
 
@@ -7,15 +8,27 @@
   font-family: Poppins;
 }
 
+.fadeIn {
+  opacity: 0;
+}
+
 .main {
   height: 100vh;
   position: relative;
-  background-image: url(./ryujingamebackground.png);
-  background-position: center;
-  background-size: cover;
+  background: url(./ryujingamebackground.png);
+  background-position: center, center;
+  background-size: cover, cover;
+  
+}
+.mainDark {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  transition: background-color 0.5s;
   display: flex;
-  align-items: center;
   justify-content: center;
+  background-color: rgba(0,0,0,0);
 }
 .secTitle {
   margin-bottom: 18px;
@@ -25,7 +38,7 @@
   margin-bottom: 10px;
   font-weight: 500;
 }
-.transparent-grey-div {
+/* .transparent-grey-div {
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 0);
@@ -36,7 +49,7 @@
   align-items: center;
   justify-content: center;
   z-index: -1;
-}
+} */
 #roulette {
   position: absolute;
   border-radius: 999px;
@@ -46,7 +59,6 @@
 }
 
 .beast {
-  aspect-ratio: 0.917;
   position: relative;
   background-image: url("RyuBeast.png");
   background-size: contain;
@@ -83,11 +95,17 @@
   user-select: none;
 }
 .number-text {
-  font-weight: 600;
-  font-size: 26px;
+  font-weight: 700;
+  font-size: 24px;
   color: white;
   font-family: corbel;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.623);
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #1c1d1e;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  width: 100%;
 }
 
 .shuriken {
@@ -99,6 +117,20 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 20;
+
+}
+.blurred-shuriken {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  /* object-fit: contain; */
+  top: 50%;
+  left: 50%;
+  /* transform: translateX(-50%) translateY(-50%); */
+  transform-origin: center;
+  z-index: 20;
+  animation: shurinken-spin 0.6s linear infinite;
+  opacity: 0;
 }
 
 .blurred-wheel {
@@ -110,7 +142,7 @@
 }
 
 .number span {
-  transform: rotate(45deg);
+  transform: rotate(228deg);
   color: white;
 }
 
@@ -128,6 +160,21 @@ body.show-image .expanding-image {
 
 .game-container {
   background-color: rgba(0, 0, 0, 0.49);
+  border-inline: 2px solid #414141;
+  position: relative;
+}
+.loading {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(26,26,27,0.6) 40%, rgba(30,30,31,0.6) 50%, rgba(27,27,28,0.6) 60%, rgba(0,0,0,0) 100%);
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
 }
 .row-of-three {
   display: flex;
@@ -181,6 +228,18 @@ body.show-image .expanding-image {
     align-self: auto;
     aspect-ratio: auto;
   }
+  .number-text {
+    font-size: 13px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.623);
+    -webkit-text-stroke-width: 0.4px;
+  }
+}
+@media (max-width: 1025px) {
+  .number-text {
+    font-size: 16px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.623);
+    -webkit-text-stroke-width: 0.4px;
+  }
 }
 
 .winners-container {
@@ -222,6 +281,22 @@ body.show-image .expanding-image {
   cursor: pointer;
   color: white;
 }
+#claim {
+  background: url(claim.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 220px;
+  aspect-ratio: 3.5;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  z-index: 60;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
 .multiplier {
   background: url(multiplier_bg.png);
   background-position: center;
@@ -244,4 +319,13 @@ body.show-image .expanding-image {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #ffa234;
+}
+
+@keyframes shurinken-spin {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) ;
+  }
+  100% {
+    transform:  translateX(-50%) translateY(-50%) rotate(360deg);
+  }
 }
