@@ -164,8 +164,8 @@ body.show-image .expanding-image {
   position: relative;
 }
 .loading {
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(26,26,27,0.6) 40%, rgba(30,30,31,0.6) 50%, rgba(27,27,28,0.6) 60%, rgba(0,0,0,0) 100%);
+  /* background: rgb(0,0,0); */
+  /* background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(26,26,27,0.6) 40%, rgba(30,30,31,0.6) 50%, rgba(27,27,28,0.6) 60%, rgba(0,0,0,0) 100%); */
   position: absolute;
   top: 50%;
   width: 40%;
@@ -290,12 +290,26 @@ body.show-image .expanding-image {
   aspect-ratio: 3.5;
   cursor: pointer;
   color: white;
+
+}
+#rewardActionsContainer {
   position: absolute;
   bottom: 10%;
   z-index: 60;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
+}
+#open {
+  background: url(open.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 220px;
+  aspect-ratio: 3.5;
+  cursor: pointer;
+  color: white;
+
 }
 .multiplier {
   background: url(multiplier_bg.png);

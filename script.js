@@ -2,8 +2,8 @@
 setTimeout(() => {
   gsap.to(".fadeIn", { opacity: 1, duration: 2, delay: 0.2 });
   gsap.to(".loading", { opacity: 0, duration: 0.5 });
-  const mainDark = document.querySelector(".mainDark");
-  mainDark.style.backgroundColor = "rgba(0,0,0,0.6)";
+//   const mainDark = document.querySelector(".mainDark");
+//   mainDark.style.backgroundColor = "rgba(0,0,0,0.6)";
 }, 2000);
 
 function revealAnimation() {
@@ -39,7 +39,7 @@ function revealAnimation() {
   });
   gsap.to(".scrollsContainer", { opacity: 1, duration: 1 });
   gsap.to(".reward", { opacity: 1, duration: 1, delay: 3.2 });
-  gsap.to("#claim", { opacity: 1, duration: 1, delay: 3.6 });
+  gsap.to("#rewardActionsContainer", { opacity: 1, duration: 1, delay: 3.6 });
   gsap.to(".revealDarkBg", {
     opacity: 1,
     PointerEvents: "auto",
